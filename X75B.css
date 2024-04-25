@@ -1,42 +1,4 @@
 @import url('normalize.css');
-body > header {
-    padding: 1.5rem 0;
-}
-
-body > header,
-body > footer {
-    background: #123;
-}
-
-body > header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-body > header nav ul a {
-    color: white;
-    text-decoration: none;
-}
-body > footer {
-    color: #FFF;
-}
-
-body > footer>*:last-child {
-    grid-column: span 3;
-    text-align: center;
-    padding: 1rem;
-}
-
-@media (min-width: 1000px) {
-    body > footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        color: #FFF;
-    }
-}
 
 * {
     box-sizing: border-box;
@@ -52,9 +14,44 @@ main {
     justify-content: center;
 }
 
+body>header {
+    padding: 1.5rem 0;
+}
 
+body>header,
+body>footer {
+    background: #123;
+}
 
+body>header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
 
+body>header nav ul a {
+    color: white;
+    text-decoration: none;
+}
+
+body>footer {
+    color: #FFF;
+}
+
+body>footer>*:last-child {
+    grid-column: span 3;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (min-width: 1000px) {
+    body>footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 li {
     list-style-type: none;
@@ -80,7 +77,6 @@ textarea {
 }
 
 button {
-    
     border: 1px solid black;
     border-radius: 5px;
     background: #DCD;
@@ -91,21 +87,36 @@ button:hover {
     background: red;
 }
 
-
-
-
 article.catalog {
     border: 1px solid #F0F;
     max-width: 20rem;
 }
-article.catalog > div{
 
+article.catalog>div {
     padding: 1rem;
-
 }
 
-img{
+article.catalog footer{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+article.catalog .price{
+    margin-left:auto;
+}
+
+html[lang="nl"] article.catalog .price::before,
+html[lang="fr"] article.catalog .price::after{
+    /** Unicode for Euro symbol */
+    content: '\20AC'; 
+}
+html[lang="en"] article.catalog .price::before{
+    content: '$';
+
+}
+img {
     max-width: 100%;
-    height:auto;
+    height: auto;
 }
-

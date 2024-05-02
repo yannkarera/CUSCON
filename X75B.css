@@ -11,21 +11,13 @@ main {
     border: 1px #FFF;
     max-width: 80rem;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
 }
 
 body>header {
     padding: 1.5rem 0;
 }
 
-body>header,
-body>footer {
-    border: #05c2ce;
-    border-radius: 15px;
-    background: #FFF
-    
-}
+
 
 body>header nav ul {
     display: flex;

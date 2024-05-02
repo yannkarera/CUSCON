@@ -20,7 +20,7 @@
             <ul>
                 <?php
                 $menu = [
-                    'home' => 'Home',
+                    'home' => 'HOME',
                     'catalog#1' => 'CONTROLLERS',
                     'catalog#2' => 'OTHERS',
                     'catalog#3' => 'PS/PC',

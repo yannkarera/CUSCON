@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT</title>
     <link rel="stylesheet" href="X75B.css">
+    <link rel="stylesheet" href="cuscon.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,14 +20,14 @@
             <ul>
                 <?php
                 $menu = [
-                    'home' => 'Accueil',
-                    'contact' => 'Contact',
-                    'catalog' => 'Catalogue',
-                    'register' => 'Inscription',
-                    'login' => 'Connexion',
-                    'logout' => 'Déconnexion',
-                    'profile' => 'Profil',
-                    'product' => 'Item'
+                    'home' => 'Home',
+                    'catalog#1' => 'CONTROLLERS',
+                    'catalog#2' => 'OTHERS',
+                    'catalog#3' => 'PS/PC',
+                    'catalog#4' => 'XBOX',
+                    'catalog#5' => 'NINTENDO',
+                    'search' => 'S',
+                    'login' => 'LOG IN'
                 ];
 
                 foreach($menu as $href => $label){
@@ -48,33 +54,19 @@
     <footer>
         <div>
             
-            <address>
-                X75B <br>   
-                023867058 <br>
-                x75b@gmail.com_create_guid
-                
-            </address>
-                
-            <nav>
-            <a href="#">facebook</a>
-            <a href="#">insta</a>
-            <a href="#">X</a>   
-            </nav>    
+           
             
         </div>
        
        
        <div>
            
-        <img src="img/map.png" alt="carte local de l'efp">
+        
 
        </div>         
        <div>
         <ul>
-            <li><a href="#">Lien 1</a></li>
-            <li><a href="#">Lien 2</a></li>
-            <li><a href="#">Lien 3</a></li>
-            <li><a href="#">Lien 4</a></li>
+            
         </ul>
            
         <!--partenaire/liens/CGV-->

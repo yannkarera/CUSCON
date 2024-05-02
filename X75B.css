@@ -1,5 +1,6 @@
 @import url('normalize.css');
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +8,7 @@
 }
 
 main {
-    border: 1px solid red;
+    border: 1px #FFF;
     max-width: 80rem;
     margin: 0 auto;
     display: flex;
@@ -20,7 +21,10 @@ body>header {
 
 body>header,
 body>footer {
-    background: #123;
+    border: #05c2ce;
+    border-radius: 15px;
+    background: #FFF
+    
 }
 
 body>header nav ul {
@@ -32,7 +36,7 @@ body>header nav ul {
 }
 
 body>header nav ul a {
-    color: white;
+    color: #05c2ce;
     text-decoration: none;
 }
 
@@ -58,6 +62,7 @@ li {
 }
 
 
+
 form div {
     text-align: center;
 }
@@ -77,6 +82,8 @@ textarea {
 }
 
 button {
+    background-color: #05c2ce;
+    color: #FFF;
     border: 1px solid black;
     border-radius: 5px;
     background: #DCD;
@@ -84,12 +91,14 @@ button {
 }
 
 button:hover {
-    background: red;
+    background:#05c2ce;
 }
 
 article.catalog {
     border: 1px solid #F0F;
+    border-radius: 15px;
     max-width: 20rem;
+    background-color: #05c2ce;
 }
 
 article.catalog>div {

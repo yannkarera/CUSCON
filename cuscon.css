@@ -98,8 +98,8 @@ p {
 }
 .controllers {
   position: absolute;
-  top: 75%;
-  left: 45%;
+  top: 33%;
+  left: 42%;
   border:1px solid #05c2ce;
   border-radius: 15px;
   background-color: #fff;
@@ -117,4 +117,34 @@ p {
   object-fit: cover;
   object-position: center;
 }
- 
+
+.homepage2 .hero2 {
+  max-width: 40%;
+  position: relative;
+
+
+}
+
+.others {
+  position: absolute;
+  border:1px solid #05c2ce;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #05c2ce;
+  top: 80%;
+  left: 45%;
+}
+
+.homepage2 .hero3 {
+  max-width: 100%;
+  position: relative;
+  left: 20%;
+
+}
+
+.homepage3 {
+  border: 1px solid black;
+
+}
+
+

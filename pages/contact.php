@@ -1,5 +1,5 @@
 
-<section>
+<section class="contact">
 
 <form action="" method="POST">
     <h1>CONTACT US</h1>

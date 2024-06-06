@@ -60,18 +60,12 @@ form div {
 }
 
 label {
+    color: #FFF;
     display: block;
     margin-top: 1rem;
 }
 
-input,
-textarea {
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 0.5rem;
-    resize: none;
-}
+
 
 button {
     background-color: #05c2ce;

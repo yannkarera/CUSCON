@@ -1,5 +1,5 @@
 <section id="Login">
-  <button id="contact">CONTACT</button>
+  <a href="http://localhost/CUSCON/index.php?page=contact"><button class="contact">CONTACT</button></a>
   <h1>log in</h1>
   <form action="index.php?action=identify">
     <label for="username">Username</label>

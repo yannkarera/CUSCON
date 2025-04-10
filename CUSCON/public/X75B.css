@@ -1,0 +1,117 @@
+@import url('normalize.css');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border: 1px #FFF;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+body>header {
+    padding: 1.5rem 0;
+}
+
+
+
+body>header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+body>header nav ul a {
+    color: #05c2ce;
+    text-decoration: none;
+}
+
+body>footer {
+    color: #FFF;
+}
+
+body>footer>*:last-child {
+    grid-column: span 3;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (min-width: 1000px) {
+    body>footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+form div {
+    text-align: center;
+}
+
+label {
+    color: #FFF;
+    display: block;
+    margin-top: 1rem;
+}
+
+
+
+button {
+    background-color: #05c2ce;
+    color: #FFF;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #DCD;
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    background:#05c2ce;
+}
+
+article.catalog {
+    border: 1px solid #F0F;
+    border-radius: 15px;
+    max-width: 20rem;
+    background-color: #05c2ce;
+}
+
+article.catalog>div {
+    padding: 1rem;
+}
+
+article.catalog footer{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+article.catalog .price{
+    margin-left:auto;
+}
+
+html[lang="nl"] article.catalog .price::before,
+html[lang="fr"] article.catalog .price::after{
+    /** Unicode for Euro symbol */
+    content: '\20AC'; 
+}
+html[lang="en"] article.catalog .price::before{
+    content: '$';
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

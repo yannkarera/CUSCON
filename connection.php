@@ -1,18 +1,16 @@
 <?php
 
-$host = 'localhost';
-$db   = 'cuscon';
-$user='root';
-$pass = 'Cuscon3264';
-$charset = 'utf8mb4';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "cuscon";
 
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 
-$pdo = new PDO($dsn, $user, $pass, $options);
+if ($conn->connect_error) {
+    die ("La connexion a échoué : " . $conn->connect_error);
+}
+
+
 ?>

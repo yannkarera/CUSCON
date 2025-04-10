@@ -1,178 +1,49 @@
+<?php
+
+$conn = new mysqli('localhost', 'root', '', 'cuscon');
+
+if ($conn->connect_error) {
+  die ("Connexion échouée : " . $conn->connect_error);
+}
+?>
+
+<?php include 'skeleton.php' ?>
+
+
 <h1>CONTROLLERS</h1>
 
 <section class="container5">
-  <?php foreach ($produits as $produits): ?>
-  <div class="item">
+    <?php
+
+    $sql = 'SELECT name, prix FROM produit';
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()){
+
+        echo '
+        <div class="item">
     <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        <?php echo htmlspecialchars($produits['description']);?>
-     </p>
+      <img src="../public/img/manette.jpg" alt="manette, controller" />
+      <p class="text">' . $row['name'] . '</p
+      </article>
+      <footer>
+      <button class="controllers">Add</button>
+      <span class="price">' . $row['prix'] . '</span>
+      <button class="controllers">Review</button>
+      </footer>
+      </div>';
+    }
+  } else {
+    echo "<p> Aucun produit trouvé.</p>";
+  }
+    
+     
+ $conn->close();
+ ?>       
+
         
+    
+    
+ 
 
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price"><?php echo htmlspecialchars($produits['price']);?></span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <?php endforeach; ?>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum 
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum 
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-  <div class="item">
-    <article class="catalog">
-      <img src="public/img/manette.jpg" alt="manette, controller" />
-      <p class="text">
-        Lorem ipsum
-      </p>
-
-      <footer>
-        <button class="controllers">Add</button>
-        <span class="price">10</span>
-        <button class="controllers">Review</button>
-      </footer>
-    </article>
-  </div>
-</section>

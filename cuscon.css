@@ -272,19 +272,6 @@ h2 {
   width: calc(33.33% - 10px);
 }
 
-.container3,
-.boutons {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.container3 img {
-  max-width: 200px;
-  width: calc(33.33% - 50px);
-  height: auto;
-}
 
 .container5 {
   display: flex;
@@ -383,11 +370,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  margin: 10vh auto;
+  max-width: 100%;
 }
 
-
+.container3 label{
+  color: black;
+}
 
 .container {
   text-align: center;
@@ -405,6 +394,7 @@ nav {
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  
 }
 
 input[type="radio"] {

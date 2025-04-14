@@ -1,21 +1,15 @@
-<?php
+<?php 
 
-$conn = new mysqli('localhost', 'root', '', 'cuscon');
+require_once 'connection.php'
 
-if ($conn->connect_error) {
-  die ("Connexion échouée : " . $conn->connect_error);
-}
 ?>
-
-<?php include 'skeleton.php' ?>
-
 
 <h1>CONTROLLERS</h1>
 
 <section class="container5">
     <?php
 
-    $sql = 'SELECT name, prix FROM produit';
+    $sql = 'SELECT name, prix FROM product';
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -24,7 +18,7 @@ if ($conn->connect_error) {
         echo '
         <div class="item">
     <article class="catalog">
-      <img src="../public/img/manette.jpg" alt="manette, controller" />
+      <img src="img/manette.jpg" alt="manette, controller" />
       <p class="text">' . $row['name'] . '</p
       </article>
       <footer>

@@ -14,20 +14,20 @@
         <nav>
             <ul>
                 <?php
-                $menu = [
-                    'home' => 'Accueil',
-                    'contact' => 'Contact',
-                    'catalog' => 'Catalogue',
-                    'register' => 'Inscription',
-                    'login' => 'Connexion',
-                ];
-
-                foreach($menu as $href => $label){
-                    // echo '<li><a href="index.php?page=' . $href . '">' . $label . '</a></li>';
-                    printf('<li><a href="index.php?page=%s">%s</a></li>', $href, $label);
-                    
-                }
-                
+                //$menu = [
+                  //  'home' => 'Accueil',
+                    //'contact' => 'Contact',
+                    //'catalog' => 'Catalogue',
+                    //'register' => 'Inscription',
+                    //'login' => 'Connexion',
+             //   ];//
+//
+          //      foreach($menu as $href => $label){
+                    //// echo '<li><a href="index.php?page=' . $href . '">' . $label . '</a></li>';
+                    //printf('<li><a href="index.php?page=%s">%s</a></li>', $href, $label);
+                    //
+            //    }//
+                include 'partials_/navbar2.html'
                 ?>
                
             </ul>

@@ -3,11 +3,11 @@
   --primary-opaque: rgba(5, 194, 206, 0.6);
 }
 
-body > header,
+/*body > header,
 body > footer {
   border-bottom: 1px solid var(--primary);
   background: #fff;
-}
+}*/
 
 #Login {
   border: 1px solid;
@@ -96,7 +96,7 @@ h1,
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  max-width: 400px;
+  max-width: 400px
   margin: auto;
   border: 1px solid;
   border-radius: 15px;
@@ -179,6 +179,7 @@ p {
   background-color: #fff;
   color: #05c2ce;
   margin: auto;
+  margin-bottom: 2vh;
 }
 
 .controllers:hover {
@@ -307,6 +308,7 @@ h2 {
   margin-bottom: 10px;
   color: #fff;
 }
+
 .text {
   color: #fff;
   text-align: center;
@@ -335,9 +337,34 @@ h3 {
 .container6 h3 {
   text-align: left;
 }
-nav {
-  position: relative;
+.navbar {
+display: flex;
+align-items: center;
+padding: 10px 20px;
 }
+
+.navbar img{
+  height: 40px;
+  margin-right: 20px;
+}
+.navbar a{
+  color: var(--primary);
+  text-decoration: none;
+  margin-right: 15px;
+}
+.nav_items{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav_items li a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 
 * {
   margin: 0;

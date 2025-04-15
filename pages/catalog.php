@@ -9,7 +9,7 @@ require_once 'connection.php'
 <section class="container5">
     <?php
 
-    $sql = 'SELECT name, prix FROM product';
+    $sql = 'SELECT name, prix FROM items';
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -21,7 +21,7 @@ require_once 'connection.php'
       <img src="img/manette.jpg" alt="manette, controller" />
       <p class="text">' . $row['name'] . '</p
       </article>
-      <footer>
+      <footer class="item_footer">
       <button class="controllers">Add</button>
       <span class="price">' . $row['prix'] . '</span>
       <button class="controllers">Review</button>

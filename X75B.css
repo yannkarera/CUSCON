@@ -13,13 +13,13 @@ main {
     margin: 0 auto;
 }
 
-body>header {
+/*body>header {
     padding: 1.5rem 0;
-}
+}*/
 
 
 
-body>header nav ul {
+/*body>header nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -30,7 +30,7 @@ body>header nav ul {
 body>header nav ul a {
     color: #05c2ce;
     text-decoration: none;
-}
+} */
 
 body>footer {
     color: #FFF;

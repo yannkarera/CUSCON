@@ -12,7 +12,7 @@
     
     <div class="homepage">
       <img src="img/gaming.webp" alt="gaming" class="hero" />
-      <a href="http://localhost/CUSCON/index.php?page=NEW"><button class="new">NEW</button></a>
+      <a href="http://localhost/CUSCON/index.php?page=new"><button class="new">NEW</button></a>
     </div>
   </section>
   <h1 id="aboutus">ABOUT US</h1>
@@ -101,5 +101,6 @@
 
 
       <script src="carroussel.js"></script>
+      <script src="carroussel2.js"></script>
     </body>
     </html>

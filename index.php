@@ -9,22 +9,10 @@
 
 
 
-<?php /*
+<?php 
 
-$page = 'home';
 
-if (isset($_GET['page'])) {
-    $page = realpath('pages/' . $_GET['page'] . '.html');
-} elseif (isset($_GET['action'])) {
-    die('SINGLE ACTION NO PAGE');
-} else {
-    $page = 'home';
-}
-
-include 'skeleton.php';
-
-?> */
-$allowed_pages = ['home', 'contact', 'catalog']; // liste blanche
+$allowed_pages = ['home', 'contact', 'catalog', 'new', 'items']; // liste blanche
 
 if (isset($_GET['page']) && in_array($_GET['page'], $allowed_pages)) {
     $base = 'pages/' . $_GET['page'];
@@ -41,5 +29,4 @@ if (isset($_GET['page']) && in_array($_GET['page'], $allowed_pages)) {
 }
 
 include 'skeleton.php';
-?>
 ?>

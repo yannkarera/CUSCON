@@ -4,12 +4,12 @@ require_once 'connection.php'
 
 ?>
 
-<h1>CONTROLLERS</h1>
+<h1>**NEW**</h1>
 
 <section class="container5">
     <?php
 
-    $sql = 'SELECT name, price FROM items';
+    $sql = 'SELECT item_id, name, price FROM items ORDER BY item_id DESC';
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

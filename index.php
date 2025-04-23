@@ -29,4 +29,8 @@ if (isset($_GET['page']) && in_array($_GET['page'], $allowed_pages)) {
 }
 
 include 'skeleton.php';
-?>
+?> 
+
+
+
+

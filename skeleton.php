@@ -7,7 +7,9 @@
     <title>PROJECT</title>
     <link rel="stylesheet" href="X75B.css">
     <link rel="stylesheet" href="cuscon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 
 <body>
     <header>

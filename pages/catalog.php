@@ -15,7 +15,7 @@ require_once 'connection.php';
 <?php
 try {
     $sql = "SELECT name, price FROM items";
-    $stmt = $conn->prepare($sql);
+    $stmt = $pdo->prepare($sql);
     $stmt->execute();
     
     // Vérifie s'il y a des résultats

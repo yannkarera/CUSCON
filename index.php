@@ -12,7 +12,7 @@
 <?php 
 
 
-$allowed_pages = ['home', 'contact', 'catalog', 'new', 'items']; // liste blanche
+$allowed_pages = ['home', 'contact', 'catalog', 'new', 'items','register']; // liste blanche
 
 if (isset($_GET['page']) && in_array($_GET['page'], $allowed_pages)) {
     $base = 'pages/' . $_GET['page'];

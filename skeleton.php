@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT</title>
-    <link rel="stylesheet" href="X75B.css">
-    <link rel="stylesheet" href="cuscon.css">
+    <link rel="stylesheet" href="assets/X75B.css">
+    <link rel="stylesheet" href="assets/cuscon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -29,7 +29,7 @@
                     //printf('<li><a href="index.php?page=%s">%s</a></li>', $href, $label);
                     //
             //    }//
-                include 'partials_/navbar2.html'
+                include 'partials_/navbar.html'
                 ?>
                
             </ul>

@@ -84,7 +84,6 @@ article.catalog {
     border: 1px solid #F0F;
     border-radius: 15px;
     max-width: 20rem;
-    background-color: #05c2ce;
 }
 
 article.catalog>div {
@@ -111,7 +110,7 @@ html[lang="en"] article.catalog .price::before{
     content: '$';
 
 }
-img {
+.item img {
     max-width: 100%;
     height: auto;
 }

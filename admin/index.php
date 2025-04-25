@@ -12,16 +12,16 @@
 
     <form action="save.php" method="POST">
         <label for="item_id">Item_id:</label>
-        <input type="text" id="item_id" name="item_id" required maxlength="100"><br>
+        <input type="text" id="item_id" name="item_id" maxlength="100"><br>
 
         <label for="option_id">Option_id</label>
-        <input type="number" id="option_id" name="option_id"><br>
+        <input type="number" id="option_id" name="option_id" required><br>
         
         <label for="category_id">Category_id</label>
-        <input type="number" id="category_id" name="category_id"><br>
+        <input type="number" id="category_id" name="category_id" required><br>
         
         <label for="theme_id">Theme_id</label>
-        <input type="number" id="theme_id" name="theme_id"><br>
+        <input type="number" id="theme_id" name="theme_id" required><br>
         
         <label for="name">  Name:</label>
         <input type="text" id="name" name="name" required maxlength="100"><br>

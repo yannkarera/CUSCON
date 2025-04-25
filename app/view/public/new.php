@@ -1,20 +1,16 @@
+<?php 
 
-    
+require_once(__DIR__ . '/../connection.php');
 
-
-
-<?php
-
-require_once 'connection.php';
 
 ?>
 
-<h1>CONTROLLERS</h1>
+<h1>**NEW**</h1>
 
 <section class="container5">
 <?php
 try {
-    $sql = "SELECT name, price FROM items";
+    $sql = "SELECT item_id, name, price FROM items ORDER BY item_id DESC";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     
@@ -41,6 +37,8 @@ try {
     echo "Erreur : " . $e->getMessage();
 }
 
-$conn = null;
+ $pdo = null;
 ?>
-</section>
+    
+    
+ 

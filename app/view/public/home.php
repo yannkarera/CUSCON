@@ -11,7 +11,7 @@
   <section class="first">
     
     <div class="homepage">
-      <img src="img/gaming.webp" alt="gaming" class="hero" />
+      <img src="assets/img/gaming.webp" alt="gaming" class="hero" />
       <a href="http://localhost/CUSCON/index.php?page=new"><button class="new">NEW</button></a>
     </div>
   </section>
@@ -76,17 +76,17 @@
       <div class="carousel">
         <div class="slide active">
               <p>MUSIC</p>
-              <img src="img/music.png" alt="Music">
+              <img src="assets/img/music.png" alt="Music">
               <button class="voir-plus" data-category="music">Voir plus</button>
             </div>
             <div class="slide">
               <p>SPORTS</p>
-            <img src="img/sports.png" alt="Sports">
+            <img src="assets/img/sports.png" alt="Sports">
             <button class="voir-plus" data-category="sports">Voir plus</button>
           </div>
           <div class="slide">
             <p>FILMS</p>
-            <img src="img/cinema.png" alt="Films">
+            <img src="assets/" alt="Films">
             <button class="voir-plus" data-category="films">Voir plus</button>
           </div>
           </div>
@@ -100,7 +100,7 @@
 
 
 
-      <script src="carroussel.js"></script>
-      <script src="carroussel2.js"></script>
+      <script src="assets/carroussel.js"></script>
+      <script src="assets/carroussel2.js"></script>
     </body>
     </html>

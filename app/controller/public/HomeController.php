@@ -4,7 +4,11 @@ class HomeController
 {
     public function index()
     {
-        define('BASE_URL', '/CUSCON/');
+        require_once __DIR__ . '/../../../config/config.php';
+
+        // ou un chemin relatif selon le fichier courant
+        
+
 
         // ✅ Pas de dossier 'pages'
         $base_view = __DIR__ . '/../../view/public/';

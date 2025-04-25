@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/cuscon.css">
 <section class="register">
 
 <form action="" method="POST">
@@ -6,7 +5,7 @@
 <div class="logo">
     <i class="fas fa-gamepad">CUSCON</i>
 </div>
-    <a href="index.php?page=contact"><button class="controllers">CONTACT</button></a>
+    <a href="<?= BASE_URL ?>contact"><button class="controllers">CONTACT</button></a>
 </div>    
     <h1>Log in</h1>
     <div>
@@ -29,4 +28,3 @@
 </form>
 
 </section>
-

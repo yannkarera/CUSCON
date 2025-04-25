@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT</title>
-    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/X75B.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/cuscon.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/cuscon.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/X75B.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <?php
+<header>
+    <nav>
+        <?php
         
-                include 'navbar.html'
-                ?>
+        include 'navbar.html'
+        ?>
                
-            </ul>
-        </nav>
-    </header>
+               
+    </nav>
+ </header>
+<body>
 
     <main>
 
@@ -33,6 +32,9 @@
                 <p> <?php echo date('Y'); ?></p>
             
     </footer>
+
+    <script src="<?= BASE_URL ?>assets/js/carroussel.js"></script>
+    <script src="<?= BASE_URL ?>assets/js/carroussel2.js"></script>
 </body>
 
 </html>

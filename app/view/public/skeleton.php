@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/X75B.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ?>assets/cuscon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <?php
+        
+                include 'navbar.html'
+                ?>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <?php include $content_view;?>
+        
+    </main>
+    <footer>
+                <p> <?php echo date('Y'); ?></p>
+            
+    </footer>
+</body>
+
+</html>

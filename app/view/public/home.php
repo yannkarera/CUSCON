@@ -100,7 +100,7 @@
 
 
 
-      <script src="assets/carroussel.js"></script>
-      <script src="assets/carroussel2.js"></script>
+      <script src="../../../assets/carroussel.js"></script>
+      <script src="../../../assets/carroussel2.js"></script>
     </body>
     </html>

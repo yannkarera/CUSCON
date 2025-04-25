@@ -1,40 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <pre>
 <?php
 
-// var_dump('_GET', $_GET);
-// var_dump('_SERVER:', $_SERVER);
-$uri_parts = explode('/', $_SERVER['REQUEST_URI']);
-array_shift($uri_parts);
-// var_dump($uri_parts);
+$uri = trim($_SERVER['REQUEST_URI'], '/');
+$uri_parts = explode('/', $uri);
 
-$controller = $uri_parts[0];
-$action = $uri_parts[1];
+if ($uri_parts[0] === 'CUSCON') {
+    array_shift($uri_parts);
+}
 
-$controller_path = __DIR__."/../app/controller/public/$controller.php";
-// var_dump($controller_path);
-if(file_exists($controller_path)){
-    include($controller_path);
-    if(function_exists($action)){
-        echo "$controller has function $action";
+$controller = !empty($uri_parts[0]) ? ucfirst($uri_parts[0]) . 'Controller' : 'HomeController';
+$action = $uri_parts[1] ?? 'index';
+
+$controller_path = __DIR__ . '/../app/controller/public/' . $controller . '.php';
+
+if (file_exists($controller_path)) {
+    require_once $controller_path;
+
+    if (class_exists($controller)) {
+        $controller_instance = new $controller();
+
+        if (method_exists($controller_instance, $action)) {
+            $controller_instance->$action(); // ⬅️ Le contrôleur appelle skeleton.php
+        } else {
+            http_response_code(404);
+            exit("404 - Méthode '$action' non trouvée dans le contrôleur '$controller'.");
+        }
     } else {
         http_response_code(404);
-        exit("404 Function « {$action} » in Controller «{$controller}» does not exist");
+        exit("404 - Classe '$controller' non définie.");
     }
-}
-else{
+} else {
     http_response_code(404);
-    exit("404 controller «{$controller}» non trouvé");
+    exit("404 - Contrôleur '$controller' non trouvé.");
 }
-    
-?>
-</pre>
-</body>
-</html>

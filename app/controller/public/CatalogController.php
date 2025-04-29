@@ -1,14 +1,39 @@
 <?php
-require_once dirname(__DIR__, 2) . '/model/item.php';
+require_once dirname(__DIR__, 2) . '/model/Item.php';
+require_once dirname(__DIR__, 2) . '/model/Tag.php';
 
-class CatalogController {
-    public function index() {
-        $items = Item::getAll();
-        require __DIR__ . '/../../view/public/catalog.php';
-        $content_view = $base_view . 'catalog.php';
+function index()
+{
+    $categories = getTagsByType('categories');
+    $themes = getTagsByType('themes');
+    $options = getTagsByType('options');
 
-        include $base_view . 'skeleton.php';
-        
+    // Récupération sécurisée des paramètres GET
+    $categorieNom = isset($_GET['categorie']) ? (is_array($_GET['categorie']) ? null : $_GET['categorie']) : null;
+    $themeNom = isset($_GET['theme']) ? (is_array($_GET['theme']) ? null : $_GET['theme']) : null;
+
+    // Mapping noms vers IDs
+    $categorieId = isset($categories[$categorieNom]) ? $categories[$categorieNom] : null;
+    $themeId = isset($themes[$themeNom]) ? $themes[$themeNom] : null;
+
+    $optionNom = $_GET['option'] ?? null;
+
+    if (isset($categories[$categorieNom]) && isset($themes[$themeNom])) {
+        $categorieId = $categories[$categorieNom];
+        $themeId = $themes[$themeNom];
+        $items = getFilteredByCategoryAndTheme($categorieId, $themeId);
+    } elseif (isset($options[$optionNom])) {
+        $optionId = $options[$optionNom];
+        $items = getFilteredByOption($optionId);
+    } else {
+        $items = getAll();
     }
-    
+
+    render('catalog.php', ['items' => $items]);
 }
+
+function detail($slug){
+    $item = getItemBySlug($slug);
+    render('catalog_detail.php', ['item' => $item]);
+}
+

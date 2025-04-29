@@ -1,23 +1,23 @@
 <?php
 
-class ContactController
-{
-    public function index()
-    {
-        require_once __DIR__ . '/../../../config/config.php';
 
-        $base_view = __DIR__ . '/../../view/public/';
-        $content_view = $base_view . 'contact.php';
-
-        include $base_view . 'skeleton.php';
+    function index() {
+    
+        render('contact/form.php');
     }
 
-    // Tu peux même ajouter une méthode pour traiter le formulaire
-    public function submit()
+    function send()
     {
-        // Exemple : $_POST['email'], $_POST['message']
-        // Valider les données, envoyer un mail, enregistrer...
+        $processingWentFine = true;
+        if($processingWentFine){
 
-        echo "Message envoyé !";
-    }
+            render('contact/success.php');
+        }else{
+            $data = [];
+            $data['error'] = 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.';
+            $data['post_data'] = $_POST;
+            render('contact/form.php', $data);
+        }
+         
+
 }

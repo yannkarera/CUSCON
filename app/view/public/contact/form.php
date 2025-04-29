@@ -1,7 +1,7 @@
 
 <section class="contact">
 
-<form action="" method="POST">
+<form action="/contact/send" method="POST">
     <div class="logo">
     <i class="fas fa-gamepad">CUSCON</i>
     
@@ -26,7 +26,7 @@
 
 
     <div>
-    <button>Envoyer</button>
+    <button class="controllers">Envoyer</button>
 </div>
 </form>
 

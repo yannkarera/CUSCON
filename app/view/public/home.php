@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>homepage</title>
-</head>
-<body>
-  
+
   
   <section class="first">
     
     <div class="homepage">
-      <img src="<?= BASE_URL ?>assets/img/gaming.webp" alt="gaming" class="hero" />
-      <a href="<?= BASE_URL ?>catalog"><button class="new">NEW</button></a>
+      <img src="/assets/img/gaming.webp" alt="gaming" class="hero" />
+      <a href="/catalog"><button class="new">NEW</button></a>
     </div>
   </section>
   <h1 id="aboutus">ABOUT US</h1>
@@ -27,10 +19,10 @@
 
 <section class="second">
   <div class="homepage2">
-    <img src="<?= BASE_URL ?>assets/img/mann.avif" alt="controller" class="hero" />
+    <img src="/assets/img/mann.avif" alt="controller" class="hero" />
     <div class="container">
       
-      <a href="http://localhost/CUSCON/index.php?page=catalog"><button class="controllers">CONTROLLERS</button></a>
+    <a href="/catalog?option=controllers"><button class="controllers">CONTROLLERS</button></a>
       
     </div>
     
@@ -38,15 +30,15 @@
   <div class="container2">
     
     
-    <img src="<?= BASE_URL ?>assets/img/audio.png" alt="casque" class="hero2" />
-    <a href="http://localhost/CUSCON/index.php?page=others"><button class="others">OTHERS</button></a>
-    <img src="<?= BASE_URL ?>assets/img/accessories.jpg" alt="others" class="hero3" />
+    <img src="/assets/img/audio.png" alt="casque" class="hero2" />
+    <a href="/catalog?option=others"><button class="others">OTHERS</button></a>
+    <img src="/assets/img/accessories.jpg" alt="others" class="hero3" />
     
     
   </div>
   
   <div class="avis">
-    <script src="home.js"></script>
+    
     <div class="avis-client">
       <div class="étoiles" data-rating="4"></div>
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
@@ -76,18 +68,18 @@
       <div class="carousel">
         <div class="slide active">
               <p>MUSIC</p>
-              <img src="<?= BASE_URL ?>assets/img/music.png" alt="Music">
-              <button class="voir-plus" data-category="music">Voir plus</button>
+              <img src="/assets/img/music.png" alt="Music">
+              <button class="voir-plus" data-theme="music">Voir plus</button>
             </div>
             <div class="slide">
               <p>SPORTS</p>
-            <img src="<?= BASE_URL ?>assets/img/sports.png" alt="Sports">
-            <button class="voir-plus" data-category="sports">Voir plus</button>
+            <img src="/assets/img/sports.png" alt="Sports">
+            <button class="voir-plus" data-theme="sports">Voir plus</button>
           </div>
           <div class="slide">
             <p>FILMS</p>
-            <img src="<?= BASE_URL ?>assets/img/cinema.png" alt="Films">
-            <button class="voir-plus" data-category="films">Voir plus</button>
+            <img src="/assets/img/cinema.png" alt="Films">
+            <button class="voir-plus" data-theme="films">Voir plus</button>
           </div>
           </div>
           <button class="next">&#10095;</button>
@@ -98,9 +90,8 @@
       </div>
     </section>      
 
-    <script src="<?= BASE_URL ?>assets/js/carroussel.js"></script>
-    <script src="<?= BASE_URL ?>assets/js/carroussel2.js"></script>
+    <script src="/assets/js/carroussel.js"></script>
+    <script src="/assets/js/carroussel2.js"></script>
+    <script src="/assets/js/home.js"></script>
 
-      
-    </body>
-    </html>
+   

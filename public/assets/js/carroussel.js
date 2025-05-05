@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener( function () {
     const slides = document.querySelectorAll('.slide');
     const voirPlusButtons = document.querySelectorAll('.voir-plus');
     let currentIndex = 0;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let selectedCategory = document.querySelector('input[name="category"]:checked').value;
             let selectedSubCategory = button.getAttribute("data-category");
 
-            alert(`Catégorie: ${selectedCategory} | Sous-Catégorie: ${selectedSubCategory}`);
+            alert(`Catégorie: ${selectedCategory} | Theme: ${selectedSubCategory}`);
         });
     });
 

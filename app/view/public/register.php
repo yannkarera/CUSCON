@@ -5,7 +5,6 @@
 <div class="logo">
     <i class="fas fa-gamepad">CUSCON</i>
 </div>
-    <a href="/contact" class="controllers">CONTACT</a>
 </div>    
     <h1>Log in</h1>
     <div>

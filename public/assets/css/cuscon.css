@@ -9,6 +9,10 @@ body > footer {
   background: #fff;
 }*/
 
+a {
+  text-decoration: none;
+}
+
 
 
 h1,
@@ -20,6 +24,11 @@ h1,
   color: var(--primary);
   text-align: center;
   
+} 
+
+.footer{
+  border: 1px solid var(--primary);
+  background-color: var(--primary-opaque);
 }
 
 .register {
@@ -255,6 +264,44 @@ h2 {
 .container5 img {
   margin: auto;
 }
+.catalog{
+  max-width: 100%;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 15px;
+  background-color: var(--primary-opaque);
+
+}
+.item:hover{
+  transform: scale(1.2);
+}
+.item_footer{
+  margin-top: auto;
+  text-align: center;
+}
+
+.item_footer p{
+  color: var(--primary);
+}
+
+.quantity-selector label{
+  color: var(--primary);
+}
+.quantity-selector select{
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+}
 
 .price {
   color: #fff;
@@ -270,22 +317,7 @@ h2 {
   background-color: var(--primary);
 }
 
-.items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-}
-.item {
-  margin-bottom: 10px;
-  background-color: var(--primary-opaque);
-  display: flex;
 
-}
-
-.text {
-  color: #fff;
-  text-align: center;
-}
 h3 {
   color: var(--primary-opaque);
 }
@@ -303,66 +335,59 @@ h3 {
   text-align: left;
 }
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-}
-.navbar-left{
-  color: var(--primary);
-}
-.navbar-center{
-  flex: 1;
   display: flex;
-  justify-content: center;
-}
-.navbar-center li a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: bold;
-}
-.navbar-center i{
-  color: var(--primary);
-}
-.nav_items {
-  display: flex;
-  flex-direction: row; /* Ceci est facultatif car row est la valeur par défaut */
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  list-style: none; /* Retire les puces */
-  padding: 0;
-  margin: 0;
-  gap: 30px;
-}
-
-
-.navbar-right{
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar-right i {
-  font-size: 18px;
-  color: var(--primary);
-  cursor: pointer;
-}
-
-@media (max-width: 370px) {
-  .navbar{
-    padding: 10px 10px;
+  padding: 10px 20px;
   }
-  .nav_items{
-    gap: 10px;
+  .navbar-left{
+    color: var(--primary);
   }
-  .navbar-right{
-    gap: 10px;
-  } 
+  
   .navbar-center{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-center li a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .navbar-center i{
+    color: var(--primary);
+    cursor: pointer;
+  }
+  .navbar-center input{
     display: none;
   }
-}
-
+  .nav_items {
+    display: flex;
+    flex-direction: row; /* Ceci est facultatif car row est la valeur par défaut */
+    justify-content: center;
+    align-items: center;
+    list-style: none; /* Retire les puces */
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+  .search-input.active {
+    width: 150px;
+    opacity: 1;
+    margin-left: 8px;
+  }
+  
+  .navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-right i {
+    font-size: 18px;
+    color: var(--primary);
+    cursor: pointer;
+  }
 
 * {
   margin: 0;
@@ -507,4 +532,66 @@ input[type="radio"] {
   justify-content: center;
   color: #fff;
   background-color: var(--primary-opaque);
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid var(--primary);
+  background-color: var(--primary-opaque);
+  border-radius: 15px;
+}
+
+.item-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.item-image img {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1 1 300px;
+}
+
+.item-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: var(--primary);
+  font-size: 1.5em;
+  justify-content: center;
+  margin-top: 10vh;
+  align-items: center;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-top: 10vh;
+}
+
+.add-to-cart {
+  background-color: #fff;
+  color: var(--primary);
+  padding: 12px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 10vh;
+}
+
+.add-to-cart:hover {
+  background-color: var(--primary);
+  color: #fff;
 }

@@ -3,7 +3,7 @@
 
     function index(){
         
-        render('register.php');
+        render('register.php', ['head_title' => 'Log in']);
     }
 
   

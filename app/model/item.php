@@ -36,4 +36,12 @@ require_once '../config/connection.php';
         $stmt->execute(['identifiant' => $slug]);
         return $stmt->fetch();
     }
+
+
+    function getItemByDate(){
+        $pdo = getConnection();
+        $stmt = $pdo->prepare("SELECT * FROM items ORDER BY item_id DESC");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 ?>

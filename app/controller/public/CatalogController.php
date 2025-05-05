@@ -29,11 +29,25 @@ function index()
         $items = getAll();
     }
 
-    render('catalog.php', ['items' => $items]);
+    render('catalog.php', [
+        'items' => $items,
+        'head_title' => 'Catalog'
+    ]);
 }
 
 function detail($slug){
     $item = getItemBySlug($slug);
-    render('catalog_detail.php', ['item' => $item]);
+    render('catalog_detail.php', [
+        'item' => $item,
+        'head_title' => 'Produit'
+    ]);
+}
+    
+function LastIn() {
+    $item = getItemByDate();
+    render('new.php', [
+        'item' => $item,
+        'head_title' => 'NEW'
+    ]);
 }
 

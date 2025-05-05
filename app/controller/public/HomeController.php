@@ -3,7 +3,7 @@
     function index(){
     
 
-        render('home.php');
+        render('home.php', ['head_title' => 'Accueil']);
 
     }
 

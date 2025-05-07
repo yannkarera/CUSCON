@@ -31,7 +31,7 @@ function index()
 
     render('catalog.php', [
         'items' => $items,
-        'head_title' => 'Catalog'
+        'head_title' => 'Catalogue'
     ]);
 }
 

@@ -3,7 +3,7 @@
 
     function index() {
     
-        render('contact/form.php');
+        render('contact/form.php', ['head_title' => 'Contact']);
     }
 
     function send()
@@ -16,7 +16,7 @@
             $data = [];
             $data['error'] = 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.';
             $data['post_data'] = $_POST;
-            render('contact/form.php', $data);
+            render('contact/form.php' , $data);
         }
          
 

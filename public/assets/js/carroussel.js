@@ -1,4 +1,4 @@
-document.addEventListener( function () {
+document.addEventListener( 'DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
     const voirPlusButtons = document.querySelectorAll('.voir-plus');
     let currentIndex = 0;

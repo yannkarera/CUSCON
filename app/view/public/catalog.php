@@ -12,7 +12,7 @@ $items = $data['items'];
                  </article>
                  <footer class="item_footer">
                  <p><?= htmlspecialchars($item['name']) ?></p>
-                 <span class="price"><?= htmlspecialchars($item['price']) ?></span>
+                 <span class="price"><?= htmlspecialchars($item['price']) ?> €</span>
                  </footer>
              </div>
          <?php endforeach; ?>

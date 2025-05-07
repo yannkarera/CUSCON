@@ -15,32 +15,34 @@
 <nav class="navbar">
     
                
-    <div class="navbar-left">
-       <a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a>
-    </div>
-
-    <div class="navbar-center">
-            <ul class="nav_items" id="navItems">
-                <li class="nav_item"><a href="/home">Acceuil</a></li>
-                <li class="nav_item"><a href="/catalog">Shop</a></li>
-                <li class="nav_item"><a href="/contact">Contact</a></li>
-                <i class="fas fa-search" id="search-btn"></i>
-                <input type="text" id="search-input" class="search-input" placeholder="Search..." />
-            </ul>
-
-    </div>
-    <div class="navbar-right">
-        <a href="/register"><i class="fas fa-user"></i></a>
-        <i class="fas fa-shopping-cart"></i>
-    </div>
-  
+    
+        <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"> <i class="fa-solid fa-xmark"></i></a></li> 
+                <li><a href="/home">Acceuil</a></li>
+                <li><a href="/catalog">Shop</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/recherche"><i class="fas fa-search" id="search-btn"></i></a></li> 
+                <li><a href="/register"><i class="fas fa-user"></i></a></li>
+                <li><a href="/panier"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+        <ul>
+            <li><a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a></li> 
+            <li class="hideOnMobile"><a href="/home">Acceuil</a></li>
+            <li class="hideOnMobile"><a href="/catalog">Shop</a></li>
+            <li class="hideOnMobile"><a href="/contact">Contact</a></li>
+            <li class="hideOnMobile"><a href="/recherche"><i class="fas fa-search" id="search-btn"></i></a></li> 
+            <li class="hideOnMobile"><a href="/register"><i class="fas fa-user"></i></a></li>
+            <li class="hideOnMobile"><a href="/panier"><i class="fas fa-shopping-cart"></i></a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+    </ul>
 
 </nav>
+
+
                
-    </nav>
  </header>
 <body>
-
+<div class="page-wrapper">
     <main>
 
         %%MAIN_CONTENT%%
@@ -58,6 +60,8 @@
     <script src="/assets/js/carroussel.js"></script>
     <script src="/assets/js/carroussel2.js"></script>
     <script src="/assets/js/search.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+</div>
 </body>
 
 </html>

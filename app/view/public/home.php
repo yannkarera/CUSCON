@@ -3,11 +3,11 @@
   <section class="first">
     
     <div class="homepage">
-      <img src="/assets/img/gaming.webp" alt="gaming" class="hero" />
-      <a href="/catalog"><button class="new">NEW</button></a>
+      <h1> EXPRIME TON STYLE <br> MAITRISE TON JEU AVEC <br> AVEC NOS MANETTES <br> 100% PERSONNALISES</h1>
     </div>
   </section>
-  <h1 id="aboutus">ABOUT US</h1>
+  <div class="aboutus">
+  <h1>ABOUT US</h1>
   <p>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
   ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
@@ -16,6 +16,7 @@
   pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
   rhoncus ut
 </p>
+</div>
 
 <section class="second">
   <div class="homepage2">
@@ -31,7 +32,7 @@
     
     
     <img src="/assets/img/audio.png" alt="casque" class="hero2" />
-    <a href="/catalog?option=others"><button class="others">OTHERS</button></a>
+    <a href="/catalog?option=others"><button class="controllers">OTHERS</button></a>
     <img src="/assets/img/accessories.jpg" alt="others" class="hero3" />
     
     
@@ -57,9 +58,9 @@
 <div class="container3">
   <!-- Boutons radio pour choisir la catégorie -->
   <div class="category-selector">
-    <label><input type="radio" name="category" value="pspc" checked> PS/PC</label>
-      <label><input type="radio" name="category" value="xbox"> XBOX</label>
-      <label><input type="radio" name="category" value="nintendo"> Nintendo</label>
+    <label><input type="radio" name="category" value="pspc" checked> <span class="category_">PS/PC</span></label>
+      <label><input type="radio" name="category" value="xbox"><span class="category_">XBOX</span></label>
+      <label><input type="radio" name="category" value="nintendo"><span class="category_">NINTENDO</span></label>
     </div>
     
     <!-- Carrousel pour choisir la sous-catégorie -->

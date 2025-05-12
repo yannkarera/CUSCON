@@ -2,10 +2,7 @@
 <section class="contact">
 
 <form action="/contact/send" method="POST">
-    <div class="logo">
-    <i class="fas fa-gamepad">CUSCON</i>
     
-    </div>
     
     <h1>CONTACT US</h1>
     <label for="firstname"></label>

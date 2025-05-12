@@ -1,9 +1,12 @@
 <section class="approval">
 
 
-<h1>MESSAGE ENVOYE !
+<h1>
+    
+    MESSAGE ENVOYE !
 
-    Merci
+        Merci
+
 </h1>
 
 </section>

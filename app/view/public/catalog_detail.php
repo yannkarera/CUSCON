@@ -12,6 +12,7 @@ $max = $item['stock'];
         <p class="price"><?= ($item['price']) ?> €</p>
         <p class="description"><?= ($item['description']) ?></p>
         <button class="add-to-cart">Ajouter au panier</button>
+        <button class="add-to-favs">Ajouter au favoris</button>
     </div>
     <div class="quantity-selector">
         <label for="quanitity_<?= $item['stock']?>" >Quantity :</label>

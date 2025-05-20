@@ -13,12 +13,10 @@
 
   <body>
     <header>
-      <button id="menuToggle"><i class="fa-solid fa-bars"></i></button>
       <nav class="navbar">
-        <ul class="nav_links">
-          <li class="logo">
-            <a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a>
-          </li>
+        <a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a>
+
+        <ul>
           <li><a href="/home">Accueil</a></li>
           <li><a href="/catalog">Shop</a></li>
           <li><a href="/contact">Contact</a></li>
@@ -30,13 +28,15 @@
           <li>
             <a href="/gate"><i class="fas fa-user"></i></a>
           </li>
-          <li class="cart-container hideOnMobile">
+          <li class="cart-container ">
             <a href="/panier"
               ><i class="fas fa-shopping-cart"></i
               ><span class="cart-count">0</span></a
             >
           </li>
         </ul>
+      <button id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+
       </nav>
     </header>
     <div class="page-wrapper">
@@ -53,6 +53,7 @@
       <script src="/assets/js/search.js"></script>
       <script src="/assets/js/sidebar.js"></script>
       <script src="/assets/js/cart.js"></script>
+      <script src="/assets/js/cuscon.js"></script>
     </div>
   </body>
 </html>

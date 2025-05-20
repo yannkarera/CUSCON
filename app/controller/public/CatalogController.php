@@ -13,18 +13,14 @@ function index()
     $themeNom = isset($_GET['theme']) ? (is_array($_GET['theme']) ? null : $_GET['theme']) : null;
 
     // Mapping noms vers IDs
-    $categorieId = isset($categories[$categorieNom]) ? $categories[$categorieNom] : null;
-    $themeId = isset($themes[$themeNom]) ? $themes[$themeNom] : null;
+    // $categorieId = isset($categories[$categorieNom]) ? $categories[$categorieNom] : null;
+    // $themeId = isset($themes[$themeNom]) ? $themes[$themeNom] : null;
 
-    $optionNom = $_GET['option'] ?? null;
 
     if (isset($categories[$categorieNom]) && isset($themes[$themeNom])) {
-        $categorieId = $categories[$categorieNom];
-        $themeId = $themes[$themeNom];
-        $items = getFilteredByCategoryAndTheme($categorieId, $themeId);
-    } elseif (isset($options[$optionNom])) {
-        $optionId = $options[$optionNom];
-        $items = getFilteredByOption($optionId);
+        $items = getFilteredByCategoryAndTheme($categories[$categorieNom], $themes[$themeNom]);
+    } elseif ($_GET['option']) {
+        $items = getFilteredByAccessory( $_GET['option'] == 'accessories');
     } else {
         $items = getAll();
     }
@@ -43,11 +39,3 @@ function detail($slug){
     ]);
 }
     
-function LastIn() {
-    $item = getItemByDate();
-    render('new.php', [
-        'item' => $item,
-        'head_title' => 'NEW'
-    ]);
-}
-

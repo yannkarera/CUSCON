@@ -1,7 +1,7 @@
 <?php
 $items = $data['items'];
 ?>
-<section class="container5">
+<section class="catalogue">
      <?php if (!empty($items)) : ?>
          <?php foreach ($items as $item) : ?>
              <div class="item">

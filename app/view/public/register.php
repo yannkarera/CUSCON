@@ -2,26 +2,23 @@
 
 
 <div class="login-container" id="login-container">
-        <h1>Log in</h1>
+        <h1>Register</h1>
         
         <form action="" method="POST">
+        <label for="name"></label>
+        <input type="text" name="prénom" placeholder="Prénom">
+        <label for="familyname"></label>
+        <input type="text" placeholder="Nom">
         <label for="email"></label>
         <input type="email" name="email" placeholder="email">
         <label for="password"></label>
         <input type="password" name="password" placeholder="mot de passe">
-        <button class="controllers">se connecter</button>
-    </form>
+        <button class="controllers">s'inscrire</button>
+        </form>
 </div>
-        <div class="remember">
-            <label for=""><input type="checkbox"><span class="text">Remember me</span></label>
-            <a href="#" class="modal-link">Forgot password?</a>
-        </div>
-
-        <p>
-            Don't have an account?
-            <a href="#" class="modal-link">Register here</a>
-        </p>
+      
         
+</section>
         
         
 
@@ -30,5 +27,3 @@
 
 
     
-
-</section>

@@ -22,10 +22,10 @@ require_once '../config/connection.php';
         return $stmt->fetchAll();
     }
 
-    function getFilteredByOption($option_id){
+    function getFilteredByAccessory(bool $is_accessory){
         $pdo = getConnection();
-        $stmt = $pdo->prepare("SELECT * FROM items WHERE option_id = :option_id");
-        $stmt->execute(['option_id' => $option_id]);
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE is_accessory = :is_accessory");
+        $stmt->execute(['is_accessory' => (int)$is_accessory]);
         return $stmt->fetchAll();
 
     }

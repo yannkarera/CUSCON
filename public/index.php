@@ -13,7 +13,10 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = trim($uri, '/');
 $uri_parts = explode('/', $uri);
 
-if ($uri_parts[0] === 'CUSCON') {
+
+$section = 'public';
+if($uri_parts[0] === 'admin'){
+    $section = 'admin';
     array_shift($uri_parts);
 }
 
@@ -21,11 +24,12 @@ $controller = !empty($uri_parts[0]) ? ucfirst($uri_parts[0]) . 'Controller' : 'H
 $action = $uri_parts[1] ?? 'index';
 $id = null;
 
+
 if(isset( $uri_parts[2])){
     $id =  $uri_parts[2];
 }
 
-$controller_path = SITE_ROOT . 'app/controller/public/' . $controller . '.php';
+$controller_path = SITE_ROOT . 'app/controller/'.$section.'/' . $controller . '.php';
 
 if (file_exists($controller_path)) {
     require_once $controller_path;
@@ -41,10 +45,10 @@ if (file_exists($controller_path)) {
     exit("404 - Contrôleur '$controller' non trouvé.");
 }
 
-function render($partial, $data = [])
+function render($partial, $data = [], $section = 'public')
 {
-    $skeleton = SITE_ROOT . 'app/view/public/skeleton.html';
-    $partial = SITE_ROOT . 'app/view/public/' . $partial;
+    $skeleton = SITE_ROOT . 'app/view/'.$section.'/skeleton.html';
+    $partial = SITE_ROOT . 'app/view/'.$section.'/' . $partial;
 
     $page = file_get_contents($skeleton);
 

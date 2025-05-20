@@ -1,8 +1,10 @@
-addEventListener("DOMContentLoaded", (event) => { 
-    document.getElementById('menuToggle').addEventListener('click', (e) => {
-        toggleSidebar();
+addEventListener("DOMContentLoaded", (event) => {
+    document.querySelectorAll('.navbarToggle').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            toggleSidebar();
+        })
     })
-})
+});
 
 
 function showSidebar(){

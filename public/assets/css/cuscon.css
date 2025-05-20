@@ -11,11 +11,6 @@
   font-family: Arial, sans-serif;
 }
 
-/*body > header,
-body > footer {
-  border-bottom: 1px solid var(--primary);
-  background: #fff;
-}*/
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -448,12 +443,28 @@ h3 {
 .container6 h3 {
   text-align: left;
 }
+
 /* ======= MBOILE NAVBAR ======= */
-.navbar {
+header {
   background-color: #fff;
   box-shadow: -2px 0 5px var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
+}
 
+header a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.navbarActive~#menuClose {
+    display: block;
+    position: absolute;
+    right: 1rem;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -472,8 +483,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 3rem;
 
-  border: 1px solid #ff00ff;
   background: #fff;
   list-style: none;
 }
@@ -486,20 +497,19 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .navbar ul {
+    position: initial;
     display: flex;
     justify-content: space-evenly;
     gap: 3rem;
+    width: 100%;
+    transform: none;
+    flex-direction: row;
   }
   #menuToggle {
     display: none; /* cacher le bouton sur desktop */
   }
 }
 /* Styles des liens */
-
-.navbar a {
-  color: var(--primary);
-  text-decoration: none;
-}
 
 .navbar ul a {
   padding: 0.5rem 0;
@@ -510,7 +520,7 @@ h3 {
 }
 
 /* ======= BOUTON BURGER ======= */
-#menuToggle {
+.navbarToggle{
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -539,9 +549,6 @@ h3 {
   } */
 }
 
-.navbar li {
-  height: 50px;
-}
 .navbar .cart-icon {
   position: relative;
 }

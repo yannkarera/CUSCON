@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>%%HEAD_TITLE%%</title>
-    <link rel="stylesheet" href="/assets/css/cuscon.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="/assets/css/cuscon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-
-<header>
-<nav class="navbar">
-    
-               
-    
-        <ul class="sidebar">
-                <li onclick="hideSidebar()"><a href="#"> <i class="fa-solid fa-xmark"></i></a></li> 
-                <li><a href="/home">Acceuil</a></li>
-                <li><a href="/catalog">Shop</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/recherche"><i class="fas fa-search" id="search-btn"></i></a></li> 
-                <li><a href="/gate"><i class="fas fa-user"></i></a></li>
-                <li><a href="/panier"><i class="fas fa-shopping-cart"></i></a></li>
+  <body>
+    <header>
+      <button id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      <nav class="navbar">
+        <ul class="nav_links">
+          <li class="logo">
+            <a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a>
+          </li>
+          <li><a href="/home">Accueil</a></li>
+          <li><a href="/catalog">Shop</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="/recherche"
+              ><i class="fas fa-search" id="search-btn"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/gate"><i class="fas fa-user"></i></a>
+          </li>
+          <li class="cart-container hideOnMobile">
+            <a href="/panier"
+              ><i class="fas fa-shopping-cart"></i
+              ><span class="cart-count">0</span></a
+            >
+          </li>
         </ul>
+      </nav>
+    </header>
+    <div class="page-wrapper">
+      <main>%%MAIN_CONTENT%%</main>
+      <footer class="footer">
         <ul>
-            <li><a href="/home"> <i class="fas fa-gamepad">CUSCON</i></a></li> 
-            <li class="hideOnMobile"><a href="/home">Acceuil</a></li>
-            <li class="hideOnMobile"><a href="/catalog">Shop</a></li>
-            <li class="hideOnMobile"><a href="/contact">Contact</a></li>
-            <li class="hideOnMobile"><a href="/recherche"><i class="fas fa-search" id="search-btn"></i></a></li> 
-            <li class="hideOnMobile"><a href="/gate"><i class="fas fa-user"></i></a></li>
-            <li class="hideOnMobile"><a href="/panier"><i class="fas fa-shopping-cart"></i></a></li>
-            <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-    </ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </footer>
 
-</nav>
-
-
-               
- </header>
-<body>
-<div class="page-wrapper">
-    <main>
-
-        %%MAIN_CONTENT%%
-        
-    </main>
-    <footer class="footer">
-            <ul>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
-            </ul>
-        
-    </footer>
-            
-
-    <script src="/assets/js/carroussel.js"></script>
-    <script src="/assets/js/carroussel2.js"></script>
-    <script src="/assets/js/search.js"></script>
-    <script src="/assets/js/sidebar.js"></script>
-</div>
-</body>
-
+      <script src="/assets/js/carroussel.js"></script>
+      <script src="/assets/js/carroussel2.js"></script>
+      <script src="/assets/js/search.js"></script>
+      <script src="/assets/js/sidebar.js"></script>
+      <script src="/assets/js/cart.js"></script>
+    </div>
+  </body>
 </html>

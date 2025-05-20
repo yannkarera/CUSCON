@@ -1,9 +1,12 @@
 function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
+    document.querySelector('.navbar ul').classList.add('navbarActive')
 }
 
 function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
+    document.querySelector('.navbar ul').classList.remove('navbarActive')
+}
+
+
+function toggleSidebar(){
+    document.querySelector('.navbar ul').classList.toggle('navbarActive')
 }

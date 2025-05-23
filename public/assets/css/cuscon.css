@@ -14,6 +14,7 @@
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  gap: 1rem;
 }
 .page-wrapper {
   display: flex;
@@ -28,10 +29,81 @@ main {
 }
 .footer {
   background-color: var(--primary-opaque);
-  border-top: 5px solid var(--border);
-  padding: 20px;
+  border-top: 1rem solid var(--border);
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
 }
+.footer h2{
+  font-weight: bold;
+  color: gold;
+}
+.footer p{
+  color: var(--primary);
+  font-weight: bold;
+}
+.footer li{
+  list-style: none;
+  margin: 0.2rem 0; 
+  border-bottom: 2px solid var(--border);
+  padding: .2rem;
+}
+.footer ul {
+  margin: 0;
+  list-style: disc;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+.footer-content{
+  margin: auto;
+  max-width: 100%;
+}
+
+
+@media  screen and (min-width: 768px){
+
+  .footer-content{
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    padding: 1rem 0;
+    gap: 2rem;
+  }
+
+
+}
+.newsletter{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.footer-logo{
+  align-self: center;
+  font-size: 2.6rem;
+  color: var(--primary);
+  font-weight: bolder;
+  margin: 0 1rem;
+}
+.badge{
+  display: flex;
+  pointer-events: none;
+}
+
+.badge p{
+  align-self: center;
+}
+
+
+.inner-badge{
+  background-color: transparent;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 2px 2px;
+} 
 a {
   text-decoration: none;
 }
@@ -59,9 +131,12 @@ img {
 input[type="checkbox"] {
   accent-color: gold;
 }
-input[type="text"] {
+
+input[type="text"], input[type="email"] {
   caret-color: var(--primary);
   border-radius: 5px;
+  padding: 10px;
+  max-width: 100%;
 }
 
 h1,
@@ -70,22 +145,19 @@ h1,
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
-  color: var(--primary);
+  color: gold;
   text-align: center;
 }
 
 .register {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   max-width: 100%;
   border-radius: 15px;
   border: 5px solid var(--border);
   background-color: var(--primary-opaque);
-  padding: 30vh;
+  padding: 5rem;
   color: var(--primary);
   box-sizing: border-box;
-  margin: 20px;
+  margin: 2rem;
 }
 
 /* @media (max-width: 600px) {
@@ -220,6 +292,7 @@ textarea {
 .aboutus h1 {
   text-align: left;
   margin: 20px;
+  color: var(--primary);
 }
 
 p {
@@ -305,6 +378,7 @@ p {
   border-bottom: 10px solid var(--border);
   gap: 1rem;
   flex-wrap: wrap;
+  padding: 0.5rem;
 }
 .avis-client {
   width: 30%;
@@ -355,17 +429,19 @@ h2 {
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  color: var(--primary);
+  color: gold;
 }
-
-.catalogue {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  max-width: 100%;
-  margin: 2vw;
+@media screen and (min-width: 768px){
+  
+  .catalogue {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    margin: 2vw;
+  }
 }
-
+  
 .catalogue img {
   margin: auto;
 }
@@ -444,7 +520,7 @@ h3 {
   text-align: left;
 }
 
-/* ======= MBOILE NAVBAR ======= */
+/* ======= MOBILE NAVBAR ======= */
 header {
   background-color: #fff;
   box-shadow: -2px 0 5px var(--primary);
@@ -479,13 +555,12 @@ header a {
   width: 14rem;
   transform: translateX(14rem);
   transition: transform 0.3s ease; /* Smooth animation */
+  z-index: 999;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-
-  background: #fff;
   list-style: none;
 }
 .navbar ul.navbarActive {
@@ -505,7 +580,7 @@ header a {
     transform: none;
     flex-direction: row;
   }
-  #menuToggle {
+  .navbarToggle {
     display: none; /* cacher le bouton sur desktop */
   }
 }
@@ -517,6 +592,8 @@ header a {
 
 .navbar ul a:hover {
   background-color: var(--primary-opaque);
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 /* ======= BOUTON BURGER ======= */

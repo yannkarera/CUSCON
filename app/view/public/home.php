@@ -1,6 +1,6 @@
 
   
-<section class="Acceuil">
+<section class="Accueil">
     
     <div class="punchline">
       <h1> EXPRIME TON STYLE <br> MAITRISE TON JEU AVEC <br> AVEC NOS MANETTES <br> 100% PERSONNALISES</h1>

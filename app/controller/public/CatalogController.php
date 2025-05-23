@@ -19,7 +19,7 @@ function index()
 
     if (isset($categories[$categorieNom]) && isset($themes[$themeNom])) {
         $items = getFilteredByCategoryAndTheme($categories[$categorieNom], $themes[$themeNom]);
-    } elseif ($_GET['option']) {
+    } elseif (!empty($_GET['option'])) {
         $items = getFilteredByAccessory( $_GET['option'] == 'accessories');
     } else {
         $items = getAll();

@@ -34,13 +34,8 @@ $max = $item['stock'];
             <button onclick="addToFavorites('<?= ($item['slug']) ?>')" class="add-to-favs" type="submit">Ajouter au favoris</button>
 
     </div>
-    <div class="quantity-selector">
-        <label for="quanitity_<?= $item['stock'] ?>">Quantity :</label>
-        <select name="quanitiy" id="quantity_<? $item['stock'] ?>">
-            <?php for ($i = 1; $i <= $max; $i++): ?>
-                <option value="<? $i ?>"><?= $i ?></option>
-            <?php endfor; ?>
-        </select>
+
+   
 
 
 

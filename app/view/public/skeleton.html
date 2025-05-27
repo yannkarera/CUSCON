@@ -9,18 +9,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <a href="/home"> CUSC<i class="fas fa-gamepad">N</i></a>
+      <a href="/home" class="logo"> CUSC<i class="fas fa-gamepad">N</i></a>
       <nav class="navbar">
         <ul>
           <li><a href="/home">Accueil</a></li>
           <li><a href="/catalog">Shop</a></li>
           <li><a href="/contact">Contact</a></li>
           <li>
-            <a href="/recherche"
+            <a href="/search"
               ><i class="fas fa-search" id="search-btn"></i
             ></a>
           </li>
@@ -28,16 +31,16 @@
             <a href="/gate"><i class="fas fa-user"></i></a>
           </li>
           <li class="cart-container ">
-            <a href="/panier"
+            <a href="/cart"
               ><i class="fas fa-shopping-cart"></i
               ><span class="cart-count">0</span></a
             >
           </li>
         </ul>
-         <button class="navbarToggle" id="menuClose"><i class="fa-solid fa-xmark"></i></button>
+         <button class="navbarToggle closeSidebar" id="menuClose"><i class="fa-solid fa-xmark"></i></button>
 
       </nav>
-      <button class="navbarToggle"  id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+      <button class="navbarToggle OpenSidebar"  id="menuToggle"><i class="fa-solid fa-bars"></i></button>
 
     </header>
     <div class="page-wrapper">
@@ -46,15 +49,16 @@
       <div class="footer-content">
         <div class="newsletter">
         
-          <h2>Rejoint notre newsletter</h2>
+          <h1>Rejoint notre newsletter</h1>
           <input type="email" placeholder="email">
+          <input type="submit" value="rejoindre">
 
         </div>
        <div class="footer-logo">
         CUSC<i class="fas fa fa-gamepad"></i>N
        </div>
         <div class="latest-news">
-          <h2>Latest News</h2>
+          <h1>Latest News</h1>
           <ul>
             <li class="recent-blog-post">
               <div class="badge">
@@ -89,6 +93,9 @@
         </div>
       </div>
       
+      </footer>
+      <footer class="pricavy-contact_footer">
+        <i class="fa-copyright"></i>
       </footer>
 
       <script src="/assets/js/carroussel.js"></script>

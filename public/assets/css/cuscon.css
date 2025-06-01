@@ -2,7 +2,8 @@
   --primary: #05c2ce;
   --primary-opaque: rgba(5, 194, 206, 0.3);
   --border: rgba(93, 92, 93, 0.56);
-
+  --titles: 'Press Start 2P', system-ui;
+  --titlescolor: rgb(37, 2, 47);
 }
 
 * {
@@ -64,6 +65,7 @@ main {
   font-family: "Press Start 2P", system-ui;
   font-style: normal;
   font-size: 1rem;
+  display: flex;
 }
 
 @media  screen and (min-width: 768px){
@@ -99,6 +101,7 @@ main {
   color: var(--primary);
   font-weight: bolder;
   margin: 0 1rem;
+  display: flex;
 }
 .badge{
   display: flex;
@@ -158,7 +161,7 @@ h1,
   font-style: normal;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: gold;
+  color: var(--titlescolor);
   text-align: center;
 }
 
@@ -604,11 +607,6 @@ header a {
   padding: 0.5rem 0;
 }
 
-.navbar ul a:hover {
-  background-color: var(--primary-opaque);
-  padding: 1rem;
-  border-radius: 15px;
-}
 
 /* ======= BOUTON BURGER ======= */
 .navbarToggle{

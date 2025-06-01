@@ -2,6 +2,7 @@
   --primary: #05c2ce;
   --primary-opaque: rgba(5, 194, 206, 0.3);
   --border: rgba(93, 92, 93, 0.56);
+  --titles: rgb(25, 26, 82);
 }
 
 * {
@@ -63,6 +64,7 @@ main {
   font-family: "Press Start 2P", system-ui;
   font-style: normal;
   font-size: 1rem;
+  display: flex;
 }
 
 @media  screen and (min-width: 768px){
@@ -91,13 +93,14 @@ main {
 }
 
 .footer-logo{
+  display: flex;
   align-self: center;
   font-family: "Press Start 2P", system-ui;
   font-size: 2.6rem;
   font-style: normal;
   color: var(--primary);
   font-weight: bolder;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 .badge{
   display: flex;
@@ -157,7 +160,7 @@ h1,
   font-style: normal;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: gold;
+  color: rgb(25, 26, 82);
   text-align: center;
 }
 
@@ -261,12 +264,8 @@ textarea {
 }
 
 .punchline {
-  position: relative;
-  display: inline-block;
-  width: 100%;
   max-width: 100%;
   margin: 20px;
-  min-height: 30vh;
   border-radius: 100%;
   border: 5px solid rgba(93, 92, 93, 0.56);
   background-color: var(--primary-opaque);
@@ -401,7 +400,7 @@ p {
 }
 
 .avis-client p {
-  color: #fff;
+  color: var(--titles);
 }
 
 .étoiles {
@@ -451,13 +450,15 @@ h2 {
     margin: 2vw;
   }
 }
-  
+
 .catalogue img {
   margin: auto;
 }
 .catalog {
   max-width: 100%;
 }
+
+
 
 .items {
   display: grid;
@@ -488,7 +489,8 @@ h2 {
 }
 
 .item_footer p {
-  color: var(--primary);
+  font-family: "Press Start 2P", system-ui;
+  color: var(--titles);
 }
 
 .quantity-selector label {
@@ -500,9 +502,7 @@ h2 {
   height: 40px;
 }
 
-.price {
-  color: #fff;
-}
+
 
 .others:hover {
   color: #fff;
@@ -577,6 +577,12 @@ header a {
 }
 .navbar ul.navbarActive {
   transform: translateX(0);
+  background-color: var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.navbra ul.navbarActive a{
+  color: #fff;
 }
 
 .navbar ul li {
@@ -600,13 +606,10 @@ header a {
 
 .navbar ul a {
   padding: 0.5rem 0;
+  cursor: pointer;
 }
 
-.navbar ul a:hover {
-  background-color: var(--primary-opaque);
-  padding: 1rem;
-  border-radius: 15px;
-}
+
 
 /* ======= BOUTON BURGER ======= */
 .navbarToggle{
@@ -731,7 +734,7 @@ input[type="radio"] {
 
 .carousel p {
   font-weight: bold;
-  color: gold;
+  color: var(--titles);
 }
 
 .slide {
@@ -823,8 +826,9 @@ input[type="radio"] {
 }
 
 .price {
+  font-family: "Press Start 2P", system-ui ;
   color: var(--primary);
-  font-size: 1.5em;
+  font-size: 0.7rem;
   justify-content: center;
   margin-top: 10vh;
   align-items: center;
@@ -864,4 +868,18 @@ input[type="radio"] {
 .add-to-favs:hover {
   background-color: var(--primary);
   color: #fff;
+}
+
+.Search form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.Search ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
 }

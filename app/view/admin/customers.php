@@ -12,7 +12,7 @@
                     </li>
 
             
-             <?php endforeach; ?>
+            <?php endforeach; ?>
     </ul>
 <?php else: ?>
     <p>Aucun operateur.</p>

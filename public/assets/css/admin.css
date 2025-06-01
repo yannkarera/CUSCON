@@ -10,7 +10,10 @@
     --padding-1: 1.2rem;
     --box-shadow: 0 2rem 3rem var(--cr-light) ;
     }
-
+.important{
+    color: red;
+    font-weight: bold;
+}
 *{
     margin: 0;
     padding: 0;
@@ -125,7 +128,7 @@ aside .h3{
 
 .sidebar a{
     display: flex;
-    color: #fff;
+    color: black;
     margin-left: 2rem;
     gap: 1rem;
     align-items: center;
@@ -151,10 +154,7 @@ aside .h3{
     border-left: 5px solid var(--border);
 }
 
-aside a:hover{
-    color: var(--primary);
-    background-color: var(--border);
-}
+
 
 .sidebar a .msg_count{
     background-color: gold;
@@ -379,11 +379,6 @@ table tbody td:last-child{
     background-color: var(--primary-opaque);
     padding: 1.8rem;
     border-radius: 15px;
-    box-shadow: 0 2rem 3rem var(--border);
-    transition: all .3s ease;
-}
-.right .recent_updates:hover{
-    box-shadow: none;
 }
 
 .right .recent_updates .update{
@@ -404,3 +399,14 @@ table tbody td:last-child{
     color: var(--primary);
     margin-bottom: 40px;
 }
+
+ul li{
+    padding: 1rem;
+   margin:1rem;
+   border-radius: 10px;
+   border: 1px solid var(--border);
+   max-width: 100%;
+   background-color: var(--primary-opaque);
+   color: black;
+}
+

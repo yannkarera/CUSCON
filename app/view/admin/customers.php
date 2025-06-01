@@ -4,22 +4,14 @@
 <?php if (!empty($customers)): ?>
     <ul>
         <?php foreach ($customers as $customer): ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>Fisrtname</th>
-                    <th>name</th>
-                    <th>email</th>
-                </tr>
-            </thead>
-                              <tbody>
-                                <td><?= htmlspecialchars($customer['firstname']) ?></td>
-                                <td><?= htmlspecialchars($customer['name']) ?></td>
-                                <td><?= htmlspecialchars($customer['email']) ?></td>
-                              </tbody>
-                               </thead>
+
+                    <li>
+                    Fisrtname: <?= htmlspecialchars($customer['firstname']) ?><br>
+                    name: <?= htmlspecialchars($customer['name']) ?><br>
+                    email: <?= htmlspecialchars($customer['email']) ?><br>
+                    </li>
+
             
-             </table>
              <?php endforeach; ?>
     </ul>
 <?php else: ?>

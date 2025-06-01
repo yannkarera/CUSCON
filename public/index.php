@@ -50,6 +50,7 @@ function render($partial, $data = [], $section = 'public')
     $skeleton = SITE_ROOT . 'app/view/'.$section.'/skeleton.html';
     $partial = SITE_ROOT . 'app/view/'.$section.'/' . $partial;
 
+    extract($data);
     $page = file_get_contents($skeleton);
 
     ob_start();

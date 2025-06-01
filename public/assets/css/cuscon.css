@@ -2,6 +2,7 @@
   --primary: #05c2ce;
   --primary-opaque: rgba(5, 194, 206, 0.3);
   --border: rgba(93, 92, 93, 0.56);
+
 }
 
 * {
@@ -340,7 +341,8 @@ p {
   border: 3px solid  rgba(93, 92, 93, 0.56);
   border-radius: 15px;
   background-color: #fff;
-  color: #05c2ce;
+  color: var(--primary);
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 

@@ -7,4 +7,14 @@ function index(){
     render('search.php',['head_title' => 'Search']);
 }
 
+function results($results){
+    $str = $_POST['search'];
+    $results = SearchByKeyWord($str);
+    render('search.php', [
+    'head_title' => 'Resultats', 
+    'results' => $results
+]);
+}
+
+
 

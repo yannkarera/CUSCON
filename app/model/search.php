@@ -1,9 +1,9 @@
 <?php
 require_once '../config/connection.php';
 
-function SearchByKeyWord(){
+function SearchByKeyWord($keyword){
     $pdo = getConnection();
-    $str = $_POST["submit"];
-    $sth = $pdo->prepare("SELECT * FROM items WHERE name = '$str'");
+    $sth = $pdo->prepare("SELECT * FROM items WHERE description like ?");
+    $sth->execute(['%' . $keyword . '%']);
     return $sth->fetchAll();
 }

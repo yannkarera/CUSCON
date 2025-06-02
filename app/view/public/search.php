@@ -2,7 +2,7 @@
 <input type="text" name="search" placeholder="key word">
 <input type="submit" id="search-btn" value="Search">
 </form>
-
+<?php if(isset($results)): ?>
 <?php if(!empty($results)) : ?>
     <ul>
         <?php foreach ($results as $item): ?>
@@ -11,4 +11,5 @@
 <?php endforeach; ?>
         <?php else: ?>
     <p>Aucun résultat trouvé.</p>
+    <?php endif; ?>
 <?php endif; ?>

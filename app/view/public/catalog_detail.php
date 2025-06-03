@@ -4,16 +4,6 @@ $max = $item['stock'];
 
 ?>
 
-  <div class="cart">
-    <h2>Mon Panier</h2>
-    <div id="cartItems"></div>
-    <p><strong>Total:</strong> <span id="totalPrice">0€</span></p>
-  </div>
-
-<div id="favorite-products">
-    <h2>Mes Favoris</h2>
-    <ul id="favoritesList"></ul>
-</div>
 
 
 
@@ -22,7 +12,7 @@ $max = $item['stock'];
     <div class="item-image">
         <img src="/assets/img/manette.jpg" alt="produit">
     </div>
-    <div class="item-details">
+    <article class="item-details" data-item-id="<?= $item['item_id']; ?>">
         <h1><?= ($item['name']) ?></h1>
         <p class="price"><?= ($item['price']) ?> €</p>
         <p class="description"><?= ($item['description']) ?></p>
@@ -33,7 +23,7 @@ $max = $item['stock'];
             <button  onclick="addToCart('<?= ($item['slug']) ?>', <?= ($item['price']) ?>)" class="add-to-cart">Ajouter au panier</button>
             <button onclick="addToFavorites('<?= ($item['slug']) ?>')" class="add-to-favs" type="submit">Ajouter au favoris</button>
 
-    </div>
+</article>
 
    
 

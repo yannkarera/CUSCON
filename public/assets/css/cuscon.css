@@ -865,3 +865,38 @@ input[type="radio"] {
   background-color: var(--primary);
   color: #fff;
 }
+
+.collections{
+  display: flex;
+  gap: 5rem;
+}
+.collections button{
+  padding: .2rem;
+  background-color: #fff;
+  color: var(--primary);
+  font-weight: bold;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0.2rem 0;
+
+}
+.collections button:hover{
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.cart, .favs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.favs ul{
+  display: flex;
+  flex-direction: column;
+  grid-area: .5rem;
+}
+.cart-item{
+  display: flex;
+  gap: .2rem;
+}

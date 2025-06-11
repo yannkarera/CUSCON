@@ -8,12 +8,10 @@
     <div class="aboutus">
       <h1>ABOUT US</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-        rhoncus ut
+      Chez CUSCON, on transforme ta passion en manette.
+      Spécialisés dans la personnalisation de manettes PS, Xbox et Nintendo, on te propose des designs uniques inspirés du sport, de la musique et du cinéma. Que tu sois fan de foot, de rock ou de ton film culte, on a la manette qui te ressemble.
+
+      Exprime ton style. Joue à ta façon.
       </p>
     </div>
 </section>

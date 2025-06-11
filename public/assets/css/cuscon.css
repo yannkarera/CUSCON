@@ -3,7 +3,7 @@
   --primary-opaque: rgba(5, 194, 206, 0.3);
   --border: rgba(93, 92, 93, 0.56);
   --titles: 'Press Start 2P', system-ui;
-  --titlescolor: rgb(37, 2, 47);
+  --titlescolor: rgb(69, 3, 88);
 }
 
 * {
@@ -119,6 +119,25 @@ main {
   border-radius: 10px;
   padding: 2px 2px;
 } 
+.follow_on_socials{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  padding: 1rem;
+  gap: 2rem;
+}
+.socials{
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.socials i{
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--titlescolor);
+}
+
+
 a {
   text-decoration: none;
 }
@@ -269,7 +288,7 @@ textarea {
   display: inline-block;
   width: 100%;
   max-width: 100%;
-  margin: 20px;
+  margin: 0.2rem;
   min-height: 30vh;
   border-radius: 100%;
   border: 5px solid rgba(93, 92, 93, 0.56);
@@ -582,6 +601,9 @@ header a {
 }
 .navbar ul.navbarActive {
   transform: translateX(0);
+  background-color: var(--primary-opaque);
+  backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
 .navbar ul li {
@@ -669,7 +691,7 @@ header a {
   border-radius: 30%;
   border: 5px solid rgba(93, 92, 93, 0.56);
   background-color: var(--primary-opaque);
-  margin: 20px;
+  margin: 1rem;
 }
 .selector-carousel-container {
   align-items: center;

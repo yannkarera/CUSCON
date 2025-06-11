@@ -1,12 +1,10 @@
 <?php
 require_once '../config/connection.php';
 
-function SearchByKeyWord($keywords){
-
-    
+function SearchByKeyWord($keyword){
     $pdo = getConnection();
-    $sth = $pdo->prepare("SELECT description, slug FROM items WHERE description like :keywords ");
-    $sth->execute(['keywords' => '%' . $keywords . '%']);
+    $sth = $pdo->prepare("SELECT * FROM items WHERE description like ?");
+    $sth->execute(['%' . $keyword . '%']);
     return $sth->fetchAll();
     
     }

@@ -2,6 +2,8 @@
 require_once dirname(__DIR__, 2) . '/model/Item.php';
 require_once dirname(__DIR__, 2) . '/model/Tag.php';
 
+
+
 function index()
 {
     $categories = getTagsByType('categories');

@@ -1,18 +1,15 @@
-<section class="Search">
-<form method="get" action="/search/results">
-    <input type="text" name="keywords" value="<?= htmlspecialchars($_GET['keywords'] ?? '') ?>" placeholder="Entrez un mot-clé">
-    <input type="submit" value="Search"> 
+<form action="/search/results" method="POST">
+<input type="text" name="search" placeholder="keyword">
+<input type="submit" id="search-btn" value="Search">
 </form>
-
-<?php if (!empty($results)): ?>
- 
-    <h1>Résultats :</h1>
+<?php if(isset($results)): ?>
+<?php if(!empty($results)) : ?>
     <ul>
         <?php foreach ($results as $item): ?>
-            <li><a href="/catalog/detail/<?=htmlspecialchars($item['slug']) ?>"><?= htmlspecialchars($item['description']) ?></a></li>
-        <?php endforeach; ?>
+            <li><a href="/catalog/detail/<?= urlencode($item['slug']) ?>"><?= htmlspecialchars($item['description']) ?> </a></li>
     </ul>
-<?php  elseif (isset($_GET['keywords'])): ?>
+<?php endforeach; ?>
+        <?php else: ?>
     <p>Aucun résultat trouvé.</p>
-<?php endif;  ?>
-</section>
+    <?php endif; ?>
+<?php endif; ?>

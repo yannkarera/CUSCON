@@ -3,8 +3,10 @@
 
 <div class="login-container" id="login-container">
         <h1>Register</h1>
+         <?php if (!empty($error)): ?> <p><?= htmlspecialchars($error)?></p>
+            <?php endif; ?>
         
-        <form action="/gate/save" method="POST">
+        <form action="save" method="POST">
         <label for="name"></label>
         <input type="text" name="firstname" placeholder="Prénom">
         <label for="familyname"></label>

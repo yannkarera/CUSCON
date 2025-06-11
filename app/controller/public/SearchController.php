@@ -5,11 +5,18 @@ function index() {
     render('search.php', ['head_title' => 'Recherche']);
 }
 
-function results() {
-    $results = [];
+function results($results){
+    $str = $_POST['search'];
+    $results = SearchByKeyWord($str);
+    render('search.php', [
+    'head_title' => 'Resultats', 
+    'results' => $results
+]);
 
-    if (isset($_GET['keywords']) && !empty(trim($_GET['keywords']))) {
-        $keywords = trim($_GET['keywords']);
+
+
+if (isset($_GET['keywords']) && !empty(trim($_GET['keywords']))) {
+    $keywords = trim($_GET['keywords']);
         $results = SearchByKeyWord($keywords);
     }
 
@@ -17,4 +24,6 @@ function results() {
         'head_title' => 'Résultats',
         'results' => $results
     ]);
+    
 }
+    

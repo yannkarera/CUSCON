@@ -43,15 +43,15 @@
     
     <div class="avis-client">
       <article class="étoiles" data-rating="4"></article>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+      <p>"Une manette unique pour un joueur unique ! La qualité est incroyable et le design est exactement ce que je voulais."</p>
     </div>
     <div class="avis-client">
       <article class="étoiles" data-rating="5"></article>
-      <p>"Integer nec odio. Praesent libero. Sed cursus ante dapibus diam."</p>
+      <p>"Je n’aurais jamais cru que ma manette Xbox pourrait être aussi stylée. Merci pour ce super boulot !"</p>
     </div>
     <div class="avis-client">
       <article class="étoiles" data-rating="3"></article>
-      <p>"Maecenas nec odio et ante tincidunt tempus."</p>
+      <p>"Service au top, livraison rapide et produit parfaitement conforme. Je recommande à 100%"</p>
     </div>
   </div>
 </section>

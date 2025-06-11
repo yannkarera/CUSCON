@@ -616,6 +616,13 @@ header a {
   backdrop-filter: blur(10px);
   z-index: 999;
 }
+.navbar ul.navbarActive a {
+  color: #fff;
+}
+.navbar ul.navbarActive i {
+  color: #fff;
+}
+
 
 .navbar ul li {
   text-align: center;

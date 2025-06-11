@@ -2,6 +2,8 @@
 <input type="text" name="search" placeholder="keyword">
 <input type="submit" id="search-btn" value="Search">
 </form>
+
+
 <?php if(isset($results)): ?>
 <?php if(!empty($results)) : ?>
     <ul>

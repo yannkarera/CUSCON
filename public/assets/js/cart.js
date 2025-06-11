@@ -4,15 +4,21 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 displayCart(); // Appel immédiat au chargement
 updateCartCount(); // Appel immédiat au chargement
 displayFavorites();
+showToast();
 
 // Initial display
-
 
 function addToFavorites(productName) {
   if (!favorites.includes(productName)) {
     favorites.push(productName);
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    displayFavorites();
+    showToast(`"${productName}" ajouté aux favoris !`);
+    // Retarde le re-rendu pour laisser le toast apparaître
+    setTimeout(() => {
+      displayFavorites();
+    }, 50);
+  } else {
+    showToast(`"${productName}" est déjà dans vos favoris.`);
   }
 }
 
@@ -22,7 +28,10 @@ function displayFavorites() {
   favorites.forEach((name, index) => {
     list.innerHTML += `
       <li>
-        ${name} <button onclick="removeFavorite(${index})">❌</button>
+       <a href="/catalog/detail/${name}">
+          ${name}
+        </a>
+      <button onclick="event.stopPropagation(); removeFavorite(${index})">❌</button>
       </li>
     `;
   });
@@ -42,10 +51,16 @@ function addToCart(name, price) {
   } else {
     cart.push({ name, price, quantity: 1 });
   }
-  updateCart();
-  updateCartCount();
-  console.log(cart);
+
+  showToast(`"${name}" ajouté au panier !`);
+
+  // Retarder le DOM update juste un peu
+  setTimeout(() => {
+    updateCart();
+    updateCartCount();
+  }, 50);
 }
+
 
 function updateCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -77,7 +92,9 @@ function displayCart() {
     total += item.price * item.quantity;
     cartItems.innerHTML += `
           <div class="cart-item">
-            ${item.name} - ${item.price}€ x ${item.quantity}
+           <a href="/catalog/detail/${item.name}">
+          ${item.name} - ${item.price}€ x ${item.quantity}
+            </a>
             <button onclick="changeQuantity(${index}, 1)">+</button>
             <button onclick="changeQuantity(${index}, -1)">-</button>
             <button onclick="removeItem(${index})">Supprimer</button>
@@ -103,4 +120,13 @@ function updateCartCount() {
 //     badge.innerHTML = count;
 //     console.log('bqdge qfter set', badge.textContent)
 //   }
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
 }

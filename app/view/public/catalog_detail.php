@@ -3,11 +3,6 @@ $item = $data['item'];
 $max = $item['stock'];
 
 ?>
-
-
-
-
-
 <section class="item-container">
     <div class="item-image">
         <img src="/assets/img/manette.jpg" alt="produit">
@@ -16,19 +11,10 @@ $max = $item['stock'];
         <h1><?= ($item['name']) ?></h1>
         <p class="price"><?= ($item['price']) ?> €</p>
         <p class="description"><?= ($item['description']) ?></p>
-       
-        <form action="/favoris/ajouter/<?= ($item['slug']) ?>" method="post">
-            </form>
-            
-            <button  onclick="addToCart('<?= ($item['slug']) ?>', <?= ($item['price']) ?>)" class="add-to-cart">Ajouter au panier</button>
-            <button onclick="addToFavorites('<?= ($item['slug']) ?>')" class="add-to-favs" type="submit">Ajouter au favoris</button>
-
-</article>
-
-   
-
-
-
-
+        <div class="actions">
+        <i class="fa-solid fa-plus" onclick="addToCart('<?= ($item['slug']) ?>', <?= ($item['price']) ?>)"></i>
+        <i class="fa-solid fa-heart" onclick="addToFavorites('<?= ($item['slug']) ?>')" type="submit"></i>
+        </div>
+    </article>
     </div>
 </section>

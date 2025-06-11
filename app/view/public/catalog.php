@@ -1,6 +1,7 @@
 <?php
 $items = $data['items'];
 ?>
+Filtré par: 
 <section class="catalogue">
      <?php if (!empty($items)) : ?>
          <?php foreach ($items as $item) : ?>
@@ -13,6 +14,7 @@ $items = $data['items'];
                  <footer class="item_footer">
                  <p><?= htmlspecialchars($item['name']) ?></p>
                  <span class="price"><?= htmlspecialchars($item['price']) ?> €</span>
+                 <i class="fa-solid fa-heart" onclick="addToFavorites('<?= ($item['slug']) ?>')" type="submit"></i>
                  </footer>
              </div>
          <?php endforeach; ?>

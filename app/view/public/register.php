@@ -3,6 +3,8 @@
 
 <div class="login-container" id="login-container">
         <h1>Register</h1>
+         <?php if (!empty($error)): ?> <p><?= htmlspecialchars($error)?></p>
+            <?php endif; ?>
         
         <form action="save" method="POST">
         <label for="name"></label>

@@ -171,7 +171,10 @@ aside .h3{
     margin-left: 0;
     border-left: 5px solid var(--border);
 }
-
+.sidebar a:hover{
+    background-color: var(--border);
+    color: #fff;
+}
 
 
 .sidebar a .msg_count{

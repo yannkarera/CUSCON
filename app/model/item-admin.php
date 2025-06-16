@@ -30,3 +30,21 @@ function insert($option_id, $category_id, $theme_id, $is_accessory, $name, $slug
     ':stock'        => $stock,
     ]);
 }
+
+function getItemById($id)
+{
+    $stmt = getConnection()->prepare("SELECT * FROM items WHERE item_id = ?");
+    $stmt->execute([$id]);
+    return $stmt->fetch();
+}
+
+function updateItem($id, $option_id, $category_id, $theme_id, $is_accessory, $name, $slug, $price, $description, $stock)
+{
+    $stmt = getConnection()->prepare("
+        UPDATE items SET
+            option_id = ?, category_id = ?, theme_id = ?, is_accessory = ?,
+            name = ?, slug = ?, price = ?, description = ?, stock = ?
+        WHERE item_id = ?
+    ");
+    return $stmt->execute([$option_id, $category_id, $theme_id, $is_accessory, $name, $slug, $price, $description, $stock, $id]);
+}

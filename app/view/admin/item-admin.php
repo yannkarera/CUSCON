@@ -11,6 +11,8 @@
                                 Stock: <?= htmlspecialchars($item['stock']) ?><br>
                                 Created_at: <?= htmlspecialchars($item['created_at']) ?>
                               </li>
+                              <a href="/admin/items/edit/<?= $item['item_id'] ?>">Modifier</a>
+
 
             
              <?php endforeach; ?>

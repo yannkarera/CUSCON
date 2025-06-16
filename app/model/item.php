@@ -9,6 +9,15 @@ require_once '../config/connection.php';
         return $stmt->fetchAll();
     }
 
+    function getFilteredByCategory($categorieId){
+        $categorieId = intval($categorieId);
+
+        $pdo = getConnection();
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE category_id = :categorieId");
+        $stmt->execute([':categorieId' => $categorieId]);
+        return $stmt->fetchAll();
+    }
+    
     function getFilteredByCategoryAndTheme($categorieId, $themeId) {
         $categorieId = intval($categorieId);
         $themeId = intval($themeId);

@@ -23,7 +23,7 @@ $type  = $_POST['type'] ?? null;
 
 
 if (insert($name, $type)) {
-    render('contact/success.php', ['head_title' => 'MERCI!']);
+    render('success.php', ['head_title' => 'MERCI!'], 'admin');
 } else {
         $data = [];
         $data['error'] = 'Une erreur est survenue lors de l\'enregistrement. Veuillez réessayer.';

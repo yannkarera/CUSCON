@@ -40,7 +40,7 @@ $description  = trim($_POST['description'] ?? '');
 $stock        = $_POST['stock'] ?? 0;
 
 if (insert($option_id, $category_id, $theme_id, $is_accessory, $name, $slug, $price, $description, $stock)) {
-    render('view/admin/success.php', ['head_title' => 'MERCI!']);
+    render('success.php', ['head_title' => 'MERCI!'], 'admin');
 } else {
         $data = [];
         $data['error'] = 'Une erreur est survenue lors de l\'enregistrement. Veuillez réessayer.';

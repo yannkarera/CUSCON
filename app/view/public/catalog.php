@@ -1,8 +1,10 @@
 <?php
 $items = $data['items'];
 ?>
-Filtré par: 
+
+
 <section class="catalogue">
+
      <?php if (!empty($items)) : ?>
          <?php foreach ($items as $item) : ?>
              <div class="item">

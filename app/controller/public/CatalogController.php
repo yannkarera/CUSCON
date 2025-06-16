@@ -21,6 +21,8 @@ function index()
 
     if (isset($categories[$categorieNom]) && isset($themes[$themeNom])) {
         $items = getFilteredByCategoryAndTheme($categories[$categorieNom], $themes[$themeNom]);
+    } elseif (isset($categories[$categorieNom])) {
+        $items = getFilteredByCategory($categories[$categorieNom]);
     } elseif (!empty($_GET['option'])) {
         $items = getFilteredByAccessory( $_GET['option'] == 'accessories');
     } else {
@@ -29,6 +31,8 @@ function index()
 
     render('catalog.php', [
         'items' => $items,
+        'categories' => $categories,
+        'themes' => $themes,
         'head_title' => 'Catalogue'
     ]);
 }
@@ -40,4 +44,26 @@ function detail($slug){
         'head_title' => 'Produit'
     ]);
 }
+
+function search_ajax() {
+    header('Content-Type: application/json');
+    $keywords = trim($_GET['keywords'] ?? '');
+    
+    if (!empty($keywords)) {
+        $results = SearchByKeyWord($keywords);
+    } else {
+        $results = [];
+    }
+
+    // Ne retourne que les champs utiles
+    $filtered = array_map(function($item) {
+        return [
+            'slug' => $item['slug'],
+            'name' => $item['name'],
+        ];
+    }, $results);
+
+    echo json_encode($filtered);
+}
+
     

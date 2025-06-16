@@ -458,3 +458,9 @@ ul li{
 .addItems select{
     width: 5vw;
 }
+
+.editItem form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

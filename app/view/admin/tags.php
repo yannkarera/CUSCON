@@ -1,5 +1,12 @@
-<? $tags = $data['tags'] ?>
+<?php
+// Vérifie que $tags est bien défini
+if (!isset($tags) && isset($data['tags'])) {
+    $tags = $data['tags'];
+}
+?>
+
 <section class="items-listing">
+
 
 <h1>Tags</h1>
 

@@ -7,7 +7,7 @@ function index()
     $tags = getAllTags();
     render('tags.php', [
         'head_title' => 'Tags',
-        'tag' => $tags
+        'tags' => $tags
     ], 'admin');
 }
 
@@ -35,5 +35,41 @@ if (insert($name, $type)) {
 
 }
 
+function edit($id)
+{
+    if (!$id || !is_numeric($id)) {
+        http_response_code(400);
+        exit("ID du tag manquant ou invalide.");
+    }
+
+    // Récupération du tag par ID
+    $tag = getTagById((int)$id);
+
+    if (!$tag) {
+        http_response_code(404);
+        exit("Tag introuvable.");
+    }
+
+    // Affichage de la vue d'édition avec le tag
+    render('editTag.php', ['tag' => $tag], 'admin');
+}
+
+function update()
+{
+    $id = $_POST['tag_id'] ?? null;
+   
+
+    $name    = $_POST['name'] ?? null;
+    $type  = $_POST['type'] ?? null;
+   
+
+    if (updateTag($name, $type, $id)) {
+        render('success.php', [], 'admin');
+        exit;
+    } else {
+        echo "Erreur lors de la mise à jour du tag.";
+    }
+
+}
 
 

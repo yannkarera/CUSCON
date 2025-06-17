@@ -15,9 +15,10 @@ function getTagsByType(string $type) {
     return $ret;
 }
 
-function GetAllTags(){
+function getAllTags(){
     $pdo = getConnection();
     $stmt = $pdo->prepare("SELECT * FROM tag");
+    $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -31,11 +32,18 @@ function insert($name, $type){
     ]);
 }
 
-function updateTag($name, $type){
+function updateTag($name, $type, $id){
     $stmt = getConnection()->prepare("
         UPDATE tag SET
             name = ?, type = ?
         WHERE tag_id = ?
     ");
-    return $stmt->execute([$name, $type]);
+    return $stmt->execute([$name, $type, $id]);
+}
+
+function getTagById($id) {
+    $pdo = getConnection();
+    $stmt = $pdo->prepare("SELECT * FROM tag WHERE tag_id = ?");
+    $stmt->execute([$id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }

@@ -97,13 +97,12 @@ function update()
     $stock        = $_POST['stock'] ?? 0;
 
     if (updateItem($id, $option_id, $category_id, $theme_id, $is_accessory, $name, $slug, $price, $description, $stock)) {
-        header("Location: /admin/items/update");
+        render('success.php', [], 'admin');
         exit;
     } else {
         echo "Erreur lors de la mise à jour du produit.";
     }
 
-    render('success.php');
 }
 
 
